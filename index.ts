@@ -65,6 +65,6 @@ const addPartitionAthenaQuery = new aws.athena.NamedQuery('add_waf_logs_partitio
 const topUserAthenaQuery = new aws.athena.NamedQuery('topUser',
     { database: athena_waf_db.id, query: topUserQuery, description: 'Run query to get data'});
 
-exports.createTableAthenaQueryUri = createTableAthenaQuery.id.apply(getQueryUri);
-exports.addPartitionAthenaQueryUri = addPartitionAthenaQuery.id.apply(getQueryUri);
-exports.topUserQueryUri = topUserAthenaQuery.id.apply(getQueryUri);
+export const createTableAthenaQueryUri = createTableAthenaQuery.id.apply(getQueryUri);
+export const addPartitionAthenaQueryUri = addPartitionAthenaQuery.id.apply(getQueryUri);
+export const topUserQueryUri = topUserAthenaQuery.id.apply(getQueryUri);
